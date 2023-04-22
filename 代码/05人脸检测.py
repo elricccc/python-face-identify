@@ -3,7 +3,7 @@ def face_detect_demo():
     #将图片转换为灰度图片
     gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     #加载特征数据
-    face_detector=cv.CascadeClassifier('E:/soft/opencv/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml')
+    face_detector=cv.CascadeClassifier('E:\CodeProject\python-face-identify\opencv\sources\data\haarcascades\haarcascade_frontalface_default.xml')
     faces=face_detector.detectMultiScale(gray)
     for x,y,w,h in faces:
         cv.rectangle(img,(x,y),(x+w,y+h),color=(0,255,0),thickness=2)
